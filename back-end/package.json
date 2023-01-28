@@ -1,0 +1,19 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "This backend of Print-it project, which will automate the process of printing online.",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashish-ad/Print-it.git"
+  },
+  "author": "ashish-ad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashish-ad/Print-it/issues"
+  },
+  "homepage": "https://github.com/ashish-ad/Print-it#readme"
+}
