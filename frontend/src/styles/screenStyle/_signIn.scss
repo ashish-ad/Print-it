@@ -1,0 +1,139 @@
+$secondary: #b2a4ff;
+$grey: #adadad;
+
+.sign-in-wrapper {
+    // background-image: url(../../images/wave.svg);
+    // background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .curve {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        background: url(../../images/wave.svg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        z-index: -1;
+    }
+}
+
+.auth-box {
+    border-radius: 12px;
+    border: 1px solid $secondary;
+    box-shadow: rgba(155, 155, 155, 0.08) 0px 4px 12px;
+    padding: 30px;
+    .auth-header {
+        margin: 0px;
+        color: $secondary;
+    }
+    .header-text {
+        font-weight: 400;
+        margin-top: 10px;
+        color: $grey;
+    }
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        font-size: 14px;
+        // input:-webkit-autofill {
+        //     -webkit-text-fill-color: $secondary !important;
+        // }
+        .input-label {
+            color: $secondary;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        .input-field {
+            background-color: #f6f6f6;
+            padding: 13px;
+            font-size: 14px;
+            border: 1px solid white;
+            border-radius: 8px;
+            &:focus {
+                border: 1px solid $secondary;
+                outline: none;
+            }
+        }
+    }
+
+    .submit-btn {
+        background-color: white;
+        width: 100%;
+        padding: 10px 0px;
+        text-transform: capitalize;
+        font-size: 14px;
+        margin-top: 26px;
+        box-shadow: none;
+        border: 1px solid $secondary;
+        color: $secondary;
+        border-radius: 8px;
+        &:hover {
+            background-color: $secondary;
+            color: white;
+            border: 1px solid white;
+            box-shadow: none;
+        }
+    }
+    .divider {
+        margin-top: 20px;
+        border-color: $secondary;
+        color: $secondary;
+    }
+    .sso-wrapper {
+        margin-top: 13px;
+        .google-auth-btn {
+            border: 1px solid $secondary;
+            background-color: white;
+            color: $secondary;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            svg {
+                display: flex;
+            }
+        }
+    }
+}
+
+.date-input {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+input[type='date'] {
+    -webkit-align-items: center;
+    display: -webkit-inline-flex;
+    font-family: monospace;
+    overflow: hidden;
+    padding: 0;
+    -webkit-padding-start: 1px;
+}
+
+input::-webkit-datetime-edit {
+    -webkit-flex: 1;
+    -webkit-user-modify: read-only !important;
+    display: inline-block;
+    min-width: 0;
+    overflow: hidden;
+}
+
+input::-webkit-datetime-edit-fields-wrapper {
+    -webkit-user-modify: read-only !important;
+    display: inline-block;
+    padding: 1px 0;
+    white-space: pre;
+}
