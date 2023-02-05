@@ -4,7 +4,12 @@
   "description": "This backend of Print-it project, which will automate the process of printing online.",
   "main": "app.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "pm2 start app.js",
+    "stop": "pm2 stop all",
+    "delete": "pm2 delete all",
+    "preInstall": "npm i -g pm2",
+    "pm2Dependencies": "pm2 install pm2-intercom pm2-logrotate"
   },
   "repository": {
     "type": "git",
@@ -15,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/ashish-ad/Print-it/issues"
   },
-  "homepage": "https://github.com/ashish-ad/Print-it#readme"
+  "homepage": "https://github.com/ashish-ad/Print-it#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-body-parser-error-handler": "^1.0.4"
+  }
 }
