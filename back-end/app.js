@@ -30,26 +30,30 @@ const corsOpts = {
 };
 app.use(cors(corsOpts));
 
-// Handling route not found
-app.use(function (req, res) {
-    res.status(404);
-    const response = { statusCode: 404, error: `The Route: ${req.protocol}://${req.hostname}${req.originalUrl} is not found.` }
-    // respond with html page
-    if (req.accepts('html')) {
-        res.send(response);
-        return;
-    }
-    // respond with json
-    if (req.accepts('json')) {
-        res.json(response);
-        return;
-    }
-    // default to plain-text. send()
-    res.type('txt').send(`The Route: ${req.protocol}://${req.hostname}${req.originalUrl} is not found.`);
-});
-
 app.use("/", router);
 
-app.listen(port, () => {
+// Handling route not found
+app.use( (req, res) => {
+  res.status(404);
+  const response = { 
+    statusCode: 404, 
+    error: `The Route: ${req.protocol}://${req.hostname}${req.originalUrl} is not found.` 
+  }
+  // respond with html page
+  if (req.accepts('html')) {
+    res.send(response);
+    return;
+  }
+  // respond with json
+  if (req.accepts('json')) {
+    res.json(response);
+    return;
+  }
+  // default to plain-text. send()
+  res.type('json').send( `The Route: ${req.protocol}://${req.hostname}${req.originalUrl} is not found.` );
+});
+
+
+app.listen(Port, (req, res) => {
     console.log(`App listening on http://localhost:${Port}`);
 });

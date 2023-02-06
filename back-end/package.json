@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "This backend of Print-it project, which will automate the process of printing online.",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "npm test",
     "start": "pm2 start app.js",
+    "reStart": "pm2 restart all",
     "stop": "pm2 stop all",
     "delete": "pm2 delete all",
     "preInstall": "npm i -g pm2",
@@ -22,8 +24,10 @@
   },
   "homepage": "https://github.com/ashish-ad/Print-it#readme",
   "dependencies": {
+    "body-parser": "^1.20.1",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-body-parser-error-handler": "^1.0.4"
   }
